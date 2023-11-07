@@ -1,7 +1,14 @@
-compile:
-sh compile.sh
+## Requirements
+[SDSL Library](https://github.com/simongog/sdsl-lite)
 
-run:
-./daf_10sec -d dblp_label20 -q dblp_label20_10s -n 10 -m 100000 -k 10 -c -f
-
-need "sdsl/bit_vector"
+## Build
+```sh
+mkdir build
+cd build 
+cmake ..
+make 
+```
+## Run 
+```sh
+./DivDAF -d DATA -q QUERY -n NUM_QUERIES -m NUM_EMBEDDINGS -k TOP_K -c -f
+```
